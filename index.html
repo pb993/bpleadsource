@@ -336,6 +336,12 @@
         }
         .form-select option { background: #F7F4EF; color: #1E1E1E; }
         .form-textarea { resize: none; min-height: 96px; }
+        .form-radios { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .form-radio { display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px 14px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; color: var(--text-2); transition: all 0.2s; }
+        .form-radio:hover { border-color: var(--gold); }
+        .form-radio input[type="radio"] { accent-color: var(--gold); margin: 0; }
+        .form-radio input[type="radio"]:checked + span { color: var(--text); font-weight: 500; }
+        .form-radio:has(input:checked) { border-color: var(--gold); background: var(--gold-dim); }
         .btn-submit {
             width: 100%; padding: 16px;
             background: var(--anthrazit); color: var(--cream);
@@ -485,7 +491,7 @@
         <li><a href="#wie-es-funktioniert" onclick="smoothNav(event,'#wie-es-funktioniert')">Wie es funktioniert</a></li>
         <li><a href="#fuer-wen" onclick="smoothNav(event,'#fuer-wen')">Für wen</a></li>
         <li><a href="#pilot-angebot" onclick="smoothNav(event,'#pilot-angebot')">Pilot-Angebot</a></li>
-        <li><a href="#blog" onclick="smoothNav(event,'#blog')">Blog</a></li>
+        <li><a href="/blog">Blog</a></li>
         <li><a href="#kontakt" onclick="smoothNav(event,'#kontakt')">Kontakt</a></li>
     </ul>
     <a href="#kontakt" class="btn-nav">Kostenlos starten</a>
@@ -498,7 +504,7 @@
     <a href="#wie-es-funktioniert" onclick="closeMenu()">Wie es funktioniert</a>
     <a href="#fuer-wen" onclick="closeMenu()">Für wen</a>
     <a href="#pilot-angebot" onclick="closeMenu()">Pilot-Angebot</a>
-    <a href="#blog" onclick="closeMenu()">Blog</a>
+    <a href="/blog" onclick="closeMenu()">Blog</a>
     <a href="#kontakt" onclick="closeMenu()">Kontakt</a>
     <a href="#kontakt" class="btn-nav" style="border-radius:6px;text-align:center;" onclick="closeMenu()">Kostenlos starten</a>
 </div>
@@ -525,8 +531,8 @@
             damit Ihr Vertrieb sofort loslegen kann.
         </p>
         <div class="hero-ctas">
-            <a href="#kontakt" class="btn-primary">5 kostenlose Leads anfordern</a>
-            <a href="#wie-es-funktioniert" class="btn-secondary">Mehr erfahren ↓</a>
+            <a href="#kontakt" class="btn-primary">Angebot anfordern</a>
+            <a href="#kontakt" class="btn-secondary">5 Leads kostenlos testen</a>
         </div>
         <div class="hero-divider">
             <div class="hero-divider-line"></div>
@@ -696,6 +702,9 @@
                 </div>
             </a>
         </div>
+        <div class="reveal" style="text-align:center;margin-top:40px;">
+            <a href="/blog" style="color:var(--gold);font-size:0.9rem;font-weight:500;text-decoration:none;letter-spacing:0.03em;transition:opacity 0.2s;">Alle Artikel →</a>
+        </div>
     </div>
 </section>
 
@@ -743,6 +752,15 @@
                                     <option value="Consulting">Consulting / Beratung</option>
                                     <option value="Andere">Andere</option>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ich möchte: *</label>
+                            <div class="form-radios">
+                                <label class="form-radio"><input type="radio" name="interest" value="Pilot" required><span>5 kostenlose Leads testen</span></label>
+                                <label class="form-radio"><input type="radio" name="interest" value="Paket buchen"><span>Direkt starten (Paket buchen)</span></label>
+                                <label class="form-radio"><input type="radio" name="interest" value="Angebot"><span>Angebot anfordern</span></label>
+                                <label class="form-radio"><input type="radio" name="interest" value="Erstgespräch"><span>Erstgespräch vereinbaren</span></label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -1317,8 +1335,9 @@
             const company = form.querySelector('[name="company"]').value;
             const email = form.querySelector('[name="email"]').value;
             const niche = form.querySelector('[name="niche"]').value;
+            const interest = form.querySelector('[name="interest"]:checked')?.value || 'Nicht gewählt';
             const message = form.querySelector('[name="message"]').value;
-            const subject = encodeURIComponent('Lead-Anfrage von ' + name + ' (' + company + ')');
+            const subject = encodeURIComponent('Lead-Anfrage von ' + name + ' (' + company + ') – ' + interest);
             const body = encodeURIComponent(
                 'Neue Lead-Anfrage über BP:LeadSource\n' +
                 '────────────────────────────\n\n' +
@@ -1326,6 +1345,7 @@
                 'Firma: ' + company + '\n' +
                 'E-Mail: ' + email + '\n' +
                 'Branche: ' + niche + '\n' +
+                'Interesse: ' + interest + '\n' +
                 'Zielgruppe: ' + (message || 'Nicht angegeben') + '\n\n' +
                 '────────────────────────────\n' +
                 'Gesendet über leadsource.bp-shops.com'
