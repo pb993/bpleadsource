@@ -6,6 +6,74 @@
     <title>BP:LeadSource – Qualifizierte B2B-Leads im DACH-Raum</title>
     <meta name="description" content="BP:LeadSource ist Ihr strategischer B2B Lead-Partner im DACH-Raum. Qualifizierte Leads für SaaS, HR-Tech und Fintech.">
     <link rel="icon" type="image/png" href="/favicon.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "BP:LeadSource",
+      "description": "Strategischer B2B Lead-Partner im DACH-Raum. Qualifizierte Leads für SaaS, HR-Tech und Fintech.",
+      "url": "https://leadsource.bp-shops.com",
+      "email": "leadsource@bp-shops.com",
+      "telephone": "+4915208963909",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ernst-Schenk-Straße 9b",
+        "addressLocality": "Dinkelsbühl",
+        "postalCode": "91550",
+        "addressCountry": "DE"
+      },
+      "areaServed": ["DE", "AT", "CH"],
+      "serviceType": "B2B Lead Generation"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was kostet B2B Lead-Generation bei BP:LeadSource?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir bieten drei Pakete: Starter (800-1.500€/Monat, 50 Leads), Growth (2.000-3.500€/Monat, 150 Leads) und Pro (4.000-8.000€/Monat, 300 Leads). Zum Einstieg liefern wir 5 kostenlose Leads ohne Vertrag."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell erhalte ich qualifizierte B2B-Leads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nach Ihrem Briefing liefern wir die ersten qualifizierten Leads innerhalb von 24-48 Stunden. Inklusive fertiger Outreach-Sequenzen die direkt einsatzbereit sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Für welche Unternehmen ist BP:LeadSource geeignet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir spezialisieren uns auf B2B-Unternehmen im DACH-Raum: SaaS-Startups, HR-Tech, Fintech und Consulting mit 10-200 Mitarbeitern die skalieren wollen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist im Pilot-Angebot enthalten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "5 vollständig qualifizierte B2B-Leads inklusive verifizierter Kontaktdaten, LinkedIn-Profilen und fertigen personalisierten Outreach-Sequenzen. Kostenlos, kein Vertrag, keine Verpflichtung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie unterscheidet sich BP:LeadSource von anderen Anbietern?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir liefern keine generischen Listen. Jeder Lead wird einzeln qualifiziert und kommt mit fertigen, personalisierten Outreach-Texten. Ihr Vertrieb kann sofort loslegen – ohne selbst recherchieren oder schreiben zu müssen."
+          }
+        }
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -451,6 +519,19 @@
         .reveal-d2 { transition-delay: 0.2s; }
         .reveal-d3 { transition-delay: 0.3s; }
 
+        /* FAQ */
+        .faq { padding: 100px 56px; max-width: 900px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--border); }
+        .faq-item:first-child { border-top: 1px solid var(--border); }
+        .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; cursor: pointer; gap: 16px; }
+        .faq-q h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--anthrazit); }
+        .faq-q .faq-icon { width: 24px; height: 24px; flex-shrink: 0; color: var(--gold); transition: transform 0.3s; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+        .faq-item.open .faq-a { max-height: 400px; }
+        .faq-a-inner { padding: 0 0 24px; color: var(--text-2); font-size: 0.9rem; line-height: 1.8; font-weight: 300; }
+        .faq-a-inner strong { color: var(--anthrazit); font-weight: 500; }
+
         /* RESPONSIVE */
         @media (max-width: 900px) {
             nav { padding: 0 24px; }
@@ -575,27 +656,27 @@
     <div class="how-inner">
         <div class="how-header reveal">
             <div class="section-label">Prozess</div>
-            <h2 class="section-title">Wie es<br>funktioniert</h2>
+            <h2 class="section-title">Wie funktioniert<br>BP:LeadSource?</h2>
             <p class="section-sub">In drei Schritten zu qualifizierten Kontakten.</p>
         </div>
         <div class="how-steps">
             <div class="step reveal">
                 <div class="step-num">01</div>
                 <div class="step-line"></div>
-                <h3>Sie definieren Ihre Zielgruppe</h3>
-                <p>Branche, Unternehmensgröße, Region – wir richten uns nach Ihren Kriterien.</p>
+                <h3>Wer sind Ihre idealen Kunden?</h3>
+                <p>Sie definieren Ihre Zielgruppe – Branche, Unternehmensgröße, Region. Wir richten uns exakt nach Ihren Kriterien.</p>
             </div>
             <div class="step reveal reveal-d1">
                 <div class="step-num">02</div>
                 <div class="step-line"></div>
-                <h3>Wir liefern qualifizierte Leads</h3>
-                <p>Entscheider-Kontakte mit verifizierten E-Mails, LinkedIn-Profilen und konkreten Schmerzpunkten.</p>
+                <h3>Wann erhalte ich meine ersten Leads?</h3>
+                <p>Innerhalb von 24–48 Stunden. Qualifizierte Entscheider-Kontakte mit verifizierten E-Mails, LinkedIn-Profilen und konkreten Schmerzpunkten.</p>
             </div>
             <div class="step reveal reveal-d2">
                 <div class="step-num">03</div>
                 <div class="step-line"></div>
-                <h3>Sie erhalten fertige Outreach-Texte</h3>
-                <p>Personalisierte E-Mail-Sequenzen für jeden Lead – direkt einsatzbereit.</p>
+                <h3>Was mache ich mit den Leads?</h3>
+                <p>Sofort loslegen. Jeder Lead kommt mit fertigen, personalisierten Outreach-Sequenzen – Ihr Vertrieb kann direkt Kontakt aufnehmen.</p>
             </div>
         </div>
     </div>
@@ -773,6 +854,63 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="faq" id="faq">
+    <div class="reveal">
+        <div class="section-label">Häufige Fragen</div>
+        <h2 class="section-title" style="margin-bottom:48px;">Was Sie wissen sollten.</h2>
+    </div>
+    <div class="faq-item reveal">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <h3>Was kostet B2B Lead-Generation bei BP:LeadSource?</h3>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+            <strong>Starter:</strong> 800–1.500 €/Monat (50 Leads)<br>
+            <strong>Growth:</strong> 2.000–3.500 €/Monat (150 Leads)<br>
+            <strong>Pro:</strong> 4.000–8.000 €/Monat (300 Leads)<br><br>
+            Zum Einstieg liefern wir 5 kostenlose Leads ohne Vertrag – damit Sie unsere Qualität erleben, bevor Sie sich entscheiden.
+        </div></div>
+    </div>
+    <div class="faq-item reveal reveal-d1">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <h3>Wie schnell erhalte ich meine Leads?</h3>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+            Nach Ihrem Briefing liefern wir die ersten qualifizierten Leads innerhalb von <strong>24–48 Stunden</strong>. Inklusive fertiger Outreach-Sequenzen, die direkt einsatzbereit sind.
+        </div></div>
+    </div>
+    <div class="faq-item reveal reveal-d1">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <h3>Für welche Unternehmen ist BP:LeadSource geeignet?</h3>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+            B2B-Unternehmen im DACH-Raum: <strong>SaaS-Startups, HR-Tech, Fintech und Consulting</strong> mit 10–200 Mitarbeitern, die skalieren wollen – aber kein eigenes SDR-Team aufbauen möchten.
+        </div></div>
+    </div>
+    <div class="faq-item reveal reveal-d2">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <h3>Was ist im Pilot-Angebot enthalten?</h3>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+            5 vollständig qualifizierte B2B-Leads inklusive verifizierter Kontaktdaten, LinkedIn-Profilen und fertigen personalisierten Outreach-Sequenzen. <strong>Kostenlos, kein Vertrag, keine Verpflichtung.</strong>
+        </div></div>
+    </div>
+    <div class="faq-item reveal reveal-d2">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <h3>Was unterscheidet euch von anderen Anbietern?</h3>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+            Keine generischen Listen. Jeder Lead wird <strong>einzeln qualifiziert</strong> und kommt mit fertigen, personalisierten Outreach-Texten. Ihr Vertrieb kann sofort loslegen – ohne selbst recherchieren oder schreiben zu müssen.
+        </div></div>
     </div>
 </section>
 
