@@ -364,6 +364,68 @@
         .footer-right a:hover { color: var(--gold); }
         .footer-copy { width: 100%; text-align: center; font-size: 0.75rem; color: var(--text-3); padding-top: 20px; border-top: 1px solid var(--border); margin-top: 8px; }
 
+        /* BLOG SECTION */
+        .blog { padding: 120px 56px; }
+        .blog-inner { max-width: 1100px; margin: 0 auto; }
+        .blog-header { margin-bottom: 64px; max-width: 480px; }
+        .blog-grid { display: grid; grid-template-columns: 1fr; gap: 32px; max-width: 720px; }
+        .blog-card {
+            display: block; text-decoration: none; color: inherit;
+            padding: 40px; background: var(--cream-2);
+            border: 1px solid var(--border); border-radius: 4px;
+            transition: all 0.35s ease; position: relative; overflow: hidden;
+        }
+        .blog-card::after {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+            height: 2px; background: var(--gold);
+            transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+        }
+        .blog-card:hover { border-color: var(--border-gold); transform: translateY(-3px); box-shadow: 0 16px 40px rgba(30,30,30,0.08); }
+        .blog-card:hover::after { transform: scaleX(1); }
+        .blog-card-meta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+        .blog-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--anthrazit); margin-bottom: 12px; line-height: 1.3; }
+        .blog-card p { font-size: 0.875rem; color: var(--text-2); line-height: 1.7; font-weight: 300; margin-bottom: 16px; }
+        .blog-card-lang { display: flex; gap: 8px; }
+        .blog-card-lang span {
+            font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+            padding: 4px 10px; border: 1px solid var(--border); border-radius: 3px;
+            color: var(--text-3); text-transform: uppercase; cursor: pointer; transition: all 0.2s;
+        }
+        .blog-card-lang span:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* BLOG ARTICLE PAGE */
+        .blog-article { min-height: 100vh; padding: 120px 56px 80px; max-width: 800px; margin: 0 auto; }
+        .blog-article-back { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); text-decoration: none; font-size: 0.875rem; margin-bottom: 48px; transition: opacity 0.2s; }
+        .blog-article-back:hover { opacity: 0.7; }
+        .blog-article-meta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+        .blog-article-lang-switch { display: inline-flex; gap: 4px; margin-left: auto; }
+        .blog-article-lang-switch a {
+            font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+            padding: 4px 10px; border: 1px solid var(--border); border-radius: 3px;
+            color: var(--text-3); text-transform: uppercase; text-decoration: none; transition: all 0.2s;
+        }
+        .blog-article-lang-switch a:hover, .blog-article-lang-switch a.active { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+        .blog-article h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 24px; color: var(--anthrazit); line-height: 1.15; }
+        .blog-article .lead { font-size: 1.05rem; color: var(--text-2); line-height: 1.8; font-weight: 300; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+        .blog-article h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--anthrazit); margin: 48px 0 16px; }
+        .blog-article h3 { font-size: 1.05rem; font-weight: 600; color: var(--anthrazit); margin: 32px 0 10px; }
+        .blog-article p { color: var(--text-2); line-height: 1.8; font-size: 0.95rem; margin-bottom: 14px; font-weight: 300; }
+        .blog-article ul, .blog-article ol { color: var(--text-2); padding-left: 20px; margin-bottom: 16px; font-size: 0.95rem; line-height: 1.8; font-weight: 300; }
+        .blog-article li { margin-bottom: 6px; }
+        .blog-article table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.875rem; }
+        .blog-article thead { background: var(--cream-2); }
+        .blog-article th { text-align: left; padding: 12px 16px; font-weight: 600; color: var(--anthrazit); border-bottom: 2px solid var(--border); font-size: 0.8rem; letter-spacing: 0.04em; }
+        .blog-article td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-2); font-weight: 300; }
+        .blog-article strong { color: var(--anthrazit); font-weight: 600; }
+        .blog-article-cta {
+            margin-top: 48px; padding: 40px;
+            background: var(--anthrazit); border-radius: 8px;
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .blog-article-cta::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+        .blog-article-cta p { color: rgba(247,244,239,0.8); font-size: 1rem; font-weight: 300; margin-bottom: 20px; }
+        .blog-article-cta strong { color: var(--cream); }
+
         /* LEGAL */
         .legal { min-height: 100vh; padding: 120px 56px 80px; max-width: 800px; margin: 0 auto; }
         .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); text-decoration: none; font-size: 0.875rem; margin-bottom: 48px; transition: opacity 0.2s; }
@@ -406,6 +468,10 @@
             .footer-left { flex-direction: column; align-items: center; }
             .footer-right { justify-content: center; }
             .legal { padding: 100px 24px 60px; }
+            .blog { padding: 80px 24px; }
+            .blog-article { padding: 100px 24px 60px; }
+            .blog-article table { font-size: 0.78rem; }
+            .blog-article th, .blog-article td { padding: 8px 10px; }
         }
     </style>
 </head>
@@ -417,6 +483,7 @@
         <li><a href="#wie-es-funktioniert" onclick="smoothNav(event,'#wie-es-funktioniert')">Wie es funktioniert</a></li>
         <li><a href="#fuer-wen" onclick="smoothNav(event,'#fuer-wen')">Für wen</a></li>
         <li><a href="#pilot-angebot" onclick="smoothNav(event,'#pilot-angebot')">Pilot-Angebot</a></li>
+        <li><a href="#blog" onclick="smoothNav(event,'#blog')">Blog</a></li>
         <li><a href="#kontakt" onclick="smoothNav(event,'#kontakt')">Kontakt</a></li>
     </ul>
     <a href="#kontakt" class="btn-nav">Kostenlos starten</a>
@@ -429,6 +496,7 @@
     <a href="#wie-es-funktioniert" onclick="closeMenu()">Wie es funktioniert</a>
     <a href="#fuer-wen" onclick="closeMenu()">Für wen</a>
     <a href="#pilot-angebot" onclick="closeMenu()">Pilot-Angebot</a>
+    <a href="#blog" onclick="closeMenu()">Blog</a>
     <a href="#kontakt" onclick="closeMenu()">Kontakt</a>
     <a href="#kontakt" class="btn-nav" style="border-radius:6px;text-align:center;" onclick="closeMenu()">Kostenlos starten</a>
 </div>
@@ -599,6 +667,29 @@
 
 <div class="divider"></div>
 
+<section class="blog" id="blog">
+    <div class="blog-inner">
+        <div class="blog-header reveal">
+            <div class="section-label">Blog</div>
+            <h2 class="section-title">Insights &<br>Strategie</h2>
+            <p class="section-sub">Aktuelle Strategien für B2B-Leadgenerierung im DACH-Raum.</p>
+        </div>
+        <div class="blog-grid">
+            <a href="#blog-aeo-de" class="blog-card reveal" onclick="showPage('blog-aeo-de');return false;">
+                <div class="blog-card-meta">Strategie · April 2026</div>
+                <h3>AEO statt SEO: Warum B2B-Unternehmen auf Answer Engine Optimization setzen müssen</h3>
+                <p>67 % der B2B-Entscheider nutzen KI-Assistenten statt Google. Erfahren Sie, wie AEO Ihr Unternehmen in KI-Antworten sichtbar macht.</p>
+                <div class="blog-card-lang">
+                    <span onclick="event.preventDefault();event.stopPropagation();showPage('blog-aeo-de');">DE</span>
+                    <span onclick="event.preventDefault();event.stopPropagation();showPage('blog-aeo-en');">EN</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
 <section class="contact" id="kontakt">
     <div class="contact-inner">
         <div class="contact-grid">
@@ -660,6 +751,7 @@
     <div class="footer-left">
         <a href="#" class="footer-logo">BP:LeadSource</a>
         <div class="footer-links">
+            <a href="#blog">Blog</a>
             <a href="#impressum">Impressum</a>
             <a href="#datenschutz">Datenschutz</a>
         </div>
@@ -724,6 +816,210 @@
     </footer>
 </div>
 
+<!-- BLOG: AEO DE -->
+<div id="blog-aeo-de-page" style="display:none;">
+    <div class="blog-article">
+        <a href="#" class="blog-article-back" onclick="showPage('main','#blog');return false;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            Zurück zum Blog
+        </a>
+        <div class="blog-article-meta">
+            <span>Strategie · April 2026</span>
+            <div class="blog-article-lang-switch">
+                <a href="#blog-aeo-de" class="active" onclick="showPage('blog-aeo-de');return false;">DE</a>
+                <a href="#blog-aeo-en" onclick="showPage('blog-aeo-en');return false;">EN</a>
+            </div>
+        </div>
+        <h1>AEO statt SEO: Warum B2B-Unternehmen jetzt auf Answer Engine Optimization setzen müssen</h1>
+        <p class="lead"><strong>67 % der B2B-Entscheider beginnen ihre Buying Journey heute mit Fragen an KI-Assistenten – nicht mehr mit Google. Wer 2026 nur auf klassische SEO setzt, wird unsichtbar. Die Lösung heißt Answer Engine Optimization (AEO).</strong></p>
+
+        <h2>Die stille Revolution in der B2B-Suche</h2>
+        <p>Stellen Sie sich vor: Ihr idealer Kunde – ein Geschäftsführer eines mittelständischen Unternehmens – recherchiert eine neue Softwarelösung. Vor zwei Jahren hätte er Google geöffnet und „beste B2B-Software für Leadgenerierung" eingetippt. Heute fragt er ChatGPT, Perplexity oder den Copilot in Microsoft Edge: „Welche Strategien funktionieren 2026 am besten für B2B-Leadgenerierung?"</p>
+        <p>Der Unterschied? Bei Google klickte er auf Ihre Website. Bei der KI-Antwort wird Ihr Unternehmen entweder als Quelle zitiert – oder es existiert schlicht nicht in der Wahrnehmung des Entscheiders.</p>
+        <p>Laut aktuellen Studien nutzen bereits <strong>89 % der B2B-Einkäufer</strong> generative KI als zentrale Informationsquelle während ihres gesamten Kaufprozesses. Gleichzeitig prognostizieren Analysten, dass KI-gestützte Suche das traditionelle Suchvolumen bis Ende 2026 um <strong>25 %</strong> reduzieren wird.</p>
+
+        <h2>Was ist Answer Engine Optimization (AEO)?</h2>
+        <p>AEO ist die strategische Optimierung Ihrer Inhalte, damit KI-Systeme wie ChatGPT, Google Gemini, Perplexity und Microsoft Copilot Ihr Unternehmen in ihren Antworten zitieren, zusammenfassen und empfehlen.</p>
+        <p>Während klassische SEO darauf abzielt, in den Suchergebnissen möglichst weit oben zu ranken, geht AEO einen Schritt weiter: Es sorgt dafür, dass Ihre Expertise <strong>direkt in der KI-generierten Antwort</strong> erscheint – dort, wo Entscheider heute ihre Informationen konsumieren.</p>
+
+        <table>
+            <thead><tr><th>Kriterium</th><th>Klassische SEO</th><th>AEO</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Ziel</strong></td><td>Ranking in den Suchergebnissen</td><td>Zitierung in KI-Antworten</td></tr>
+                <tr><td><strong>Optimierung für</strong></td><td>Keywords und Backlinks</td><td>Strukturierte Antworten und Autorität</td></tr>
+                <tr><td><strong>Traffic-Modell</strong></td><td>Klick auf Website</td><td>Markennennung in der Antwort</td></tr>
+                <tr><td><strong>Erfolgsmessung</strong></td><td>Rankings, organischer Traffic</td><td>KI-Zitierungen, Brand Mentions</td></tr>
+                <tr><td><strong>Content-Format</strong></td><td>Keyword-optimierte Texte</td><td>Frage-Antwort-Strukturen, Schema.org</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Warum AEO für B2B-Unternehmen im DACH-Raum unverzichtbar wird</h2>
+        <h3>1. Ihre Zielgruppe hat sich verändert</h3>
+        <p>Über zwei Drittel der B2B-Entscheider starten ihre Recherche inzwischen mit fragenbasierten Suchanfragen über KI-Assistenten. Wenn Ihr Content nicht so strukturiert ist, dass KI-Systeme ihn verstehen und zitieren können, erreichen Sie diese Entscheider nicht mehr.</p>
+        <h3>2. Zero-Click-Suche dominiert</h3>
+        <p>Die Ära der „zehn blauen Links" ist vorbei. Google selbst liefert KI-generierte Zusammenfassungen (AI Overviews), die viele Nutzer direkt auf der Suchergebnisseite beantworten. Click-getriebene Strategien allein reichen nicht mehr aus.</p>
+        <h3>3. DSGVO-Konformität als Wettbewerbsvorteil</h3>
+        <p>Im DACH-Raum sind First-Party-Daten durch die DSGVO besonders wertvoll. Unternehmen, die ihre eigenen Daten intelligent nutzen und gleichzeitig AEO-optimierten Content erstellen, haben einen doppelten Wettbewerbsvorteil: Sie sind KI-sichtbar und datenschutzkonform.</p>
+        <h3>4. Messbare Ergebnisse</h3>
+        <p>B2B-Unternehmen, die AEO-Strategien einsetzen, verzeichnen laut Branchenanalysen <strong>bis zu 37 % mehr qualifizierte Leads</strong> im Vergleich zu reiner SEO. Die Conversion-Rate von KI-gestütztem Traffic zu Sales-Qualified Leads liegt bei <strong>27 %</strong> – deutlich über dem Durchschnitt traditioneller Suchkanäle.</p>
+
+        <h2>Die 5 Säulen einer erfolgreichen AEO-Strategie</h2>
+        <h3>Säule 1: Frage-Antwort-Strukturen aufbauen</h3>
+        <p>KI-Systeme bevorzugen Inhalte mit klaren Frage-Antwort-Mustern. Jede Seite Ihrer Website sollte eine zentrale Frage beantworten – prägnant in den ersten 50 Wörtern, detailliert im weiteren Verlauf.</p>
+        <p><strong>Praxis-Tipp:</strong> Verwandeln Sie Ihre Service-Seiten-Überschriften von „Unsere B2B-Leadgenerierung" in „Wie funktioniert professionelle B2B-Leadgenerierung?" und liefern Sie direkt danach eine klare, zitierbare Antwort.</p>
+        <h3>Säule 2: Strukturierte Daten implementieren</h3>
+        <p>Schema.org-Markup ist nicht mehr optional. FAQ-Schema, HowTo-Schema und Organization-Schema helfen KI-Systemen, Ihre Inhalte korrekt zu interpretieren und zu zitieren. Integrieren Sie strukturierte Daten in Ihre Meta-Tags, Überschriften und Content-Blöcke.</p>
+        <h3>Säule 3: Autorität und E-E-A-T stärken</h3>
+        <p>KI-Antwortmaschinen priorisieren vertrauenswürdige Quellen. E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) ist der entscheidende Faktor dafür, ob Ihr Content zitiert wird. Investieren Sie in:</p>
+        <ul>
+            <li>Autoren-Profile mit nachweisbarer Fachexpertise</li>
+            <li>Fallstudien und datenbasierte Analysen</li>
+            <li>Kundenbewertungen und Testimonials</li>
+            <li>Branchenspezifische Studien und Whitepaper</li>
+        </ul>
+        <h3>Säule 4: Prompt-basierte Content-Strategie</h3>
+        <p>KI-Plattformen reagieren auf Prompts, nicht auf Keywords. Entwickeln Sie eine Prompt-Bibliothek, die den gesamten Kaufprozess Ihrer Zielgruppe abbildet – von der Problemerkennung über die Lösungsrecherche bis zur Anbieterauswahl.</p>
+        <p><strong>Beispiel-Prompts Ihrer Zielgruppe:</strong></p>
+        <ul>
+            <li>„Welche Methoden gibt es für B2B-Leadgenerierung?"</li>
+            <li>„Wie finde ich qualifizierte Leads im DACH-Raum?"</li>
+            <li>„Was kostet eine Agentur für B2B-Leadgenerierung?"</li>
+        </ul>
+        <p>Erstellen Sie Content, der genau diese Prompts beantwortet – strukturiert, fundiert und zitierbar.</p>
+        <h3>Säule 5: Regelmäßige Aktualisierung</h3>
+        <p>KI-Systeme bevorzugen aktuelle Inhalte. Unternehmen, die bei AEO führend sind, aktualisieren ihren Content mindestens quartalsweise. Veraltete Inhalte werden von Antwortmaschinen ignoriert – Aktualität ist ein zentrales Ranking-Signal.</p>
+
+        <h2>AEO ersetzt SEO nicht – es erweitert sie</h2>
+        <p>Ein häufiges Missverständnis: AEO bedeutet nicht, SEO aufzugeben. Im Gegenteil – Ihre bestehende SEO-Grundlage bildet das Fundament für AEO. Nur wer beide Strategien kombiniert, optimiert für <strong>100 % aller Suchanfragen</strong>: sowohl für traditionelle Google-Suchen als auch für KI-gestützte Antworten.</p>
+        <p>Die gute Nachricht: Vieles, was gute SEO ausmacht – hochwertige Inhalte, klare Strukturen, technische Sauberkeit – ist auch für AEO entscheidend. Der zusätzliche Aufwand ist überschaubar, der Wettbewerbsvorteil jedoch enorm.</p>
+
+        <h2>So starten Sie mit AEO: Ihre nächsten Schritte</h2>
+        <ol>
+            <li><strong>Audit durchführen:</strong> Prüfen Sie, ob Ihr Content bereits in KI-Antworten zitiert wird. Fragen Sie ChatGPT und Perplexity nach Themen aus Ihrem Fachgebiet.</li>
+            <li><strong>Content umstrukturieren:</strong> Wandeln Sie bestehende Inhalte in Frage-Antwort-Formate um. Fügen Sie FAQ-Sektionen hinzu.</li>
+            <li><strong>Schema.org implementieren:</strong> Ergänzen Sie strukturierte Daten auf Ihren wichtigsten Seiten.</li>
+            <li><strong>Prompt-Bibliothek erstellen:</strong> Identifizieren Sie die häufigsten KI-Anfragen Ihrer Zielgruppe.</li>
+            <li><strong>Messen und optimieren:</strong> Tracken Sie KI-Zitierungen und passen Sie Ihre Strategie quartalsweise an.</li>
+        </ol>
+
+        <h2>Fazit: Wer jetzt handelt, gewinnt</h2>
+        <p>Die Verschiebung von der klassischen Suche zu KI-gestützten Antworten ist kein Zukunftsszenario – sie passiert jetzt. B2B-Unternehmen im DACH-Raum, die heute in AEO investieren, sichern sich einen entscheidenden Wettbewerbsvorteil: Sie bleiben sichtbar, wo ihre Zielgruppe sucht.</p>
+        <p>Wer wartet, riskiert, in der KI-Ära unsichtbar zu werden. Wer jetzt handelt, positioniert sich als die zitierfähige Autorität in seiner Branche.</p>
+
+        <div class="blog-article-cta">
+            <p><strong>Sie möchten wissen, wie sichtbar Ihr Unternehmen in KI-Antworten ist?</strong></p>
+            <p>Wir analysieren Ihre aktuelle AEO-Position und entwickeln eine maßgeschneiderte Strategie für Ihre B2B-Leadgenerierung.</p>
+            <a href="#kontakt" class="btn-gold" onclick="showPage('main','#kontakt');return false;">Jetzt Kontakt aufnehmen</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-left"><a href="#" class="footer-logo" onclick="showPage('main');return false;">BP:LeadSource</a></div>
+        <div class="footer-copy" style="border:none;margin:0;padding:0;">© 2026 BP:LeadSource · Philip Babuda · Dinkelsbühl</div>
+    </footer>
+</div>
+
+<!-- BLOG: AEO EN -->
+<div id="blog-aeo-en-page" style="display:none;">
+    <div class="blog-article">
+        <a href="#" class="blog-article-back" onclick="showPage('main','#blog');return false;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            Back to Blog
+        </a>
+        <div class="blog-article-meta">
+            <span>Strategy · April 2026</span>
+            <div class="blog-article-lang-switch">
+                <a href="#blog-aeo-de" onclick="showPage('blog-aeo-de');return false;">DE</a>
+                <a href="#blog-aeo-en" class="active" onclick="showPage('blog-aeo-en');return false;">EN</a>
+            </div>
+        </div>
+        <h1>AEO vs. SEO: Why B2B Companies Must Embrace Answer Engine Optimization Now</h1>
+        <p class="lead"><strong>67% of B2B decision-makers now start their buying journey by asking AI assistants — not by searching Google. In 2026, relying solely on traditional SEO means becoming invisible. The answer is Answer Engine Optimization (AEO).</strong></p>
+
+        <h2>The Silent Revolution in B2B Search</h2>
+        <p>Picture this: your ideal customer — the managing director of a mid-sized company — is researching a new software solution. Two years ago, they would have opened Google and typed "best B2B lead generation software." Today, they ask ChatGPT, Perplexity, or Microsoft Copilot: "What strategies work best for B2B lead generation in 2026?"</p>
+        <p>The difference? With Google, they clicked through to your website. With an AI answer, your company is either cited as a source — or it simply doesn't exist in that decision-maker's perception.</p>
+        <p>According to recent studies, <strong>89% of B2B buyers</strong> now use generative AI as a central information source throughout their entire purchasing process. At the same time, analysts predict that AI-powered search will reduce traditional search volume by <strong>25%</strong> by the end of 2026.</p>
+
+        <h2>What Is Answer Engine Optimization (AEO)?</h2>
+        <p>AEO is the strategic optimization of your content so that AI systems like ChatGPT, Google Gemini, Perplexity, and Microsoft Copilot cite, summarize, and recommend your company in their answers.</p>
+        <p>While traditional SEO aims to rank as high as possible in search results, AEO goes a step further: it ensures your expertise appears <strong>directly within the AI-generated answer</strong> — right where decision-makers consume their information today.</p>
+
+        <table>
+            <thead><tr><th>Criteria</th><th>Traditional SEO</th><th>AEO</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Goal</strong></td><td>Ranking in search results</td><td>Citation in AI answers</td></tr>
+                <tr><td><strong>Optimized for</strong></td><td>Keywords and backlinks</td><td>Structured answers and authority</td></tr>
+                <tr><td><strong>Traffic model</strong></td><td>Click to website</td><td>Brand mention in the answer</td></tr>
+                <tr><td><strong>Success metrics</strong></td><td>Rankings, organic traffic</td><td>AI citations, brand mentions</td></tr>
+                <tr><td><strong>Content format</strong></td><td>Keyword-optimized copy</td><td>Q&A structures, Schema.org markup</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Why AEO Is Becoming Essential for B2B Companies</h2>
+        <h3>1. Your Audience Has Changed</h3>
+        <p>Over two-thirds of B2B decision-makers now begin their research with question-based queries through AI assistants. If your content isn't structured for AI systems to understand and cite, you're no longer reaching these decision-makers.</p>
+        <h3>2. Zero-Click Search Dominates</h3>
+        <p>The era of "ten blue links" is over. Google itself now delivers AI-generated summaries (AI Overviews) that answer many users' questions directly on the search results page. Click-driven strategies alone are no longer enough.</p>
+        <h3>3. Data Privacy as a Competitive Advantage</h3>
+        <p>First-party data is more valuable than ever — especially in privacy-conscious markets. Companies that leverage their own data intelligently while creating AEO-optimized content gain a dual competitive advantage: they're AI-visible and privacy-compliant.</p>
+        <h3>4. Measurable Results</h3>
+        <p>B2B companies using AEO strategies report <strong>up to 37% more qualified leads</strong> compared to SEO alone. The conversion rate from AI-driven traffic to sales-qualified leads reaches <strong>27%</strong> — significantly above the average for traditional search channels.</p>
+
+        <h2>The 5 Pillars of a Successful AEO Strategy</h2>
+        <h3>Pillar 1: Build Question-Answer Structures</h3>
+        <p>AI systems favor content with clear question-answer patterns. Every page on your website should answer a core question — concisely within the first 50 words, with detail following.</p>
+        <p><strong>Practical tip:</strong> Transform your service page headings from "Our B2B Lead Generation" to "How Does Professional B2B Lead Generation Work?" and immediately follow with a clear, citable answer.</p>
+        <h3>Pillar 2: Implement Structured Data</h3>
+        <p>Schema.org markup is no longer optional. FAQ schema, HowTo schema, and Organization schema help AI systems correctly interpret and cite your content. Integrate structured data into your meta tags, headings, and content blocks.</p>
+        <h3>Pillar 3: Strengthen Authority and E-E-A-T</h3>
+        <p>AI answer engines prioritize trustworthy sources. E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) is the deciding factor in whether your content gets cited. Invest in:</p>
+        <ul>
+            <li>Author profiles with demonstrable domain expertise</li>
+            <li>Case studies and data-driven analyses</li>
+            <li>Customer reviews and testimonials</li>
+            <li>Industry-specific studies and whitepapers</li>
+        </ul>
+        <h3>Pillar 4: Prompt-Based Content Strategy</h3>
+        <p>AI platforms respond to prompts, not keywords. Develop a prompt library that maps your target audience's entire buying journey — from problem recognition through solution research to vendor selection.</p>
+        <p><strong>Example prompts from your audience:</strong></p>
+        <ul>
+            <li>"What methods exist for B2B lead generation?"</li>
+            <li>"How do I find qualified leads in my target market?"</li>
+            <li>"What does a B2B lead generation agency cost?"</li>
+        </ul>
+        <p>Create content that answers exactly these prompts — structured, well-founded, and citable.</p>
+        <h3>Pillar 5: Regular Content Updates</h3>
+        <p>AI systems favor fresh content. Companies leading in AEO update their content at least quarterly. Outdated content gets ignored by answer engines — freshness is a key ranking signal.</p>
+
+        <h2>AEO Doesn't Replace SEO — It Extends It</h2>
+        <p>A common misconception: AEO doesn't mean abandoning SEO. Quite the opposite — your existing SEO foundation forms the basis for AEO. Only those who combine both strategies optimize for <strong>100% of all searches</strong>: both traditional Google queries and AI-powered answers.</p>
+        <p>The good news: much of what makes great SEO — high-quality content, clear structure, technical excellence — is also crucial for AEO. The additional effort is manageable, but the competitive advantage is enormous.</p>
+
+        <h2>Getting Started with AEO: Your Next Steps</h2>
+        <ol>
+            <li><strong>Conduct an audit:</strong> Check whether your content is already being cited in AI answers. Ask ChatGPT and Perplexity about topics in your area of expertise.</li>
+            <li><strong>Restructure content:</strong> Convert existing content into question-answer formats. Add FAQ sections.</li>
+            <li><strong>Implement Schema.org:</strong> Add structured data to your most important pages.</li>
+            <li><strong>Build a prompt library:</strong> Identify the most common AI queries from your target audience.</li>
+            <li><strong>Measure and optimize:</strong> Track AI citations and adjust your strategy quarterly.</li>
+        </ol>
+
+        <h2>Conclusion: Those Who Act Now, Win</h2>
+        <p>The shift from traditional search to AI-powered answers isn't a future scenario — it's happening now. B2B companies that invest in AEO today secure a decisive competitive advantage: they remain visible where their target audience searches.</p>
+        <p>Those who wait risk becoming invisible in the AI era. Those who act now position themselves as the citable authority in their industry.</p>
+
+        <div class="blog-article-cta">
+            <p><strong>Want to know how visible your company is in AI answers?</strong></p>
+            <p>We analyze your current AEO position and develop a tailored strategy for your B2B lead generation.</p>
+            <a href="#kontakt" class="btn-gold" onclick="showPage('main','#kontakt');return false;">Get in Touch</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-left"><a href="#" class="footer-logo" onclick="showPage('main');return false;">BP:LeadSource</a></div>
+        <div class="footer-copy" style="border:none;margin:0;padding:0;">© 2026 BP:LeadSource · Philip Babuda · Dinkelsbühl</div>
+    </footer>
+</div>
+
 <script>
     window.addEventListener('scroll', () => {
         document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
@@ -741,18 +1037,35 @@
         }
     }
 
-    function showPage(page) {
-        document.getElementById('main-page').style.display = page === 'main' ? 'block' : 'none';
-        document.getElementById('impressum-page').style.display = page === 'impressum' ? 'block' : 'none';
-        document.getElementById('datenschutz-page').style.display = page === 'datenschutz' ? 'block' : 'none';
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '-30px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    function showPage(page, scrollTo) {
+        var pages = ['main','impressum','datenschutz','blog-aeo-de','blog-aeo-en'];
+        pages.forEach(function(p) {
+            var el = document.getElementById(p + '-page');
+            if (el) el.style.display = p === page ? 'block' : 'none';
+        });
         window.scrollTo({ top: 0, behavior: 'instant' });
         closeMenu();
+        if (scrollTo) {
+            setTimeout(function() {
+                var target = document.querySelector(scrollTo);
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            }, 50);
+        }
+        // Re-observe reveals on newly shown page
+        document.querySelectorAll('.reveal:not(.visible)').forEach(function(el) { observer.observe(el); });
     }
 
     function handleHash() {
         const h = window.location.hash;
         if (h === '#impressum') showPage('impressum');
         else if (h === '#datenschutz') showPage('datenschutz');
+        else if (h === '#blog-aeo-de') showPage('blog-aeo-de');
+        else if (h === '#blog-aeo-en') showPage('blog-aeo-en');
         else {
             // Only switch page if we're not already on main
             if (document.getElementById('main-page').style.display === 'none') {
@@ -770,11 +1083,6 @@
 
     window.addEventListener('hashchange', handleHash);
     handleHash();
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.08, rootMargin: '-30px' });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     const form = document.getElementById('contact-form');
     if (form) {
