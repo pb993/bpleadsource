@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leadsource.bp-shops.com/sitemap.xml
