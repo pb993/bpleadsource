@@ -1,0 +1,25 @@
+{
+  "name": "bpleadsource-export-tool",
+  "version": "1.0.0",
+  "description": "BP:LeadSource Kundenpaket Export & PDF Generator",
+  "main": "export-package.js",
+  "scripts": {
+    "export": "node export-package.js",
+    "test": "node export-package.js test-kunde test-data/final-package.md test-data/leads.md test-data/emails.md"
+  },
+  "keywords": [
+    "bpleadsource",
+    "pdf",
+    "export",
+    "markdown"
+  ],
+  "author": "BP:LeadSource",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "markdown-pdf": "^11.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
