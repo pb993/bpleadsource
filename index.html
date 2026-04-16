@@ -733,7 +733,7 @@
                 <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 8px;">✓ 25 qualifizierte Leads pro Monat</p>
                 <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 8px;">✓ Personalisierte E-Mail-Sequenz</p>
                 <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 16px;">✓ Lieferung innerhalb von 2 Wochen</p>
-                <a href="#kontakt" onclick="smoothNav(event,'#kontakt');document.querySelector('input[value=Paket]').checked=true;" style="display: inline-block; font-size: 0.875rem; color: var(--anthrazit); text-decoration: none; font-weight: 600; padding: 10px 20px; border: 1px solid var(--border); border-radius: 4px; transition: all 0.25s ease;">Starter-Paket anfragen →</a>
+                <a href="#" onclick="event.preventDefault();openPaketMail('Starter','25 qualifizierte Leads pro Monat, personalisierte E-Mail-Sequenz, Lieferung innerhalb von 2 Wochen')" style="display: inline-block; font-size: 0.875rem; color: var(--anthrazit); text-decoration: none; font-weight: 600; padding: 10px 20px; border: 1px solid var(--border); border-radius: 4px; transition: all 0.25s ease;">Starter-Paket anfragen →</a>
             </div>
             <div class="fw-card reveal reveal-d1">
                 <h3><span class="gold-text">Growth</span> – Vertrieb skalieren</h3>
@@ -741,7 +741,7 @@
                 <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 8px;">✓ 50 qualifizierte Leads pro Monat</p>
                 <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 8px;">✓ E-Mail-Sequenz + Follow-Up Tracking</p>
                 <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 16px;">✓ Lieferung innerhalb von 2 Wochen</p>
-                <a href="#kontakt" onclick="smoothNav(event,'#kontakt');document.querySelector('input[value=Paket]').checked=true;" style="display: inline-block; font-size: 0.875rem; color: var(--anthrazit); text-decoration: none; font-weight: 600; padding: 10px 20px; border: 1px solid var(--border); border-radius: 4px; transition: all 0.25s ease;">Growth-Paket anfragen →</a>
+                <a href="#" onclick="event.preventDefault();openPaketMail('Growth','50 qualifizierte Leads pro Monat, E-Mail-Sequenz mit Follow-Up Tracking, Lieferung innerhalb von 2 Wochen')" style="display: inline-block; font-size: 0.875rem; color: var(--anthrazit); text-decoration: none; font-weight: 600; padding: 10px 20px; border: 1px solid var(--border); border-radius: 4px; transition: all 0.25s ease;">Growth-Paket anfragen →</a>
             </div>
             <div class="fw-card reveal reveal-d2">
                 <h3><span class="gold-text">Pro</span> – Vollständige Pipeline</h3>
@@ -749,7 +749,7 @@
                 <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 8px;">✓ 100 qualifizierte Leads pro Monat</p>
                 <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 8px;">✓ Komplette Outreach-Kampagne + Reporting</p>
                 <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 16px;">✓ Lieferung innerhalb von 4 Wochen</p>
-                <a href="#kontakt" onclick="smoothNav(event,'#kontakt');document.querySelector('input[value=Paket]').checked=true;" style="display: inline-block; font-size: 0.875rem; color: var(--anthrazit); text-decoration: none; font-weight: 600; padding: 10px 20px; border: 1px solid var(--border); border-radius: 4px; transition: all 0.25s ease;">Pro-Paket anfragen →</a>
+                <a href="#" onclick="event.preventDefault();openPaketMail('Pro','100 qualifizierte Leads pro Monat, komplette Outreach-Kampagne mit Reporting, Lieferung innerhalb von 4 Wochen')" style="display: inline-block; font-size: 0.875rem; color: var(--anthrazit); text-decoration: none; font-weight: 600; padding: 10px 20px; border: 1px solid var(--border); border-radius: 4px; transition: all 0.25s ease;">Pro-Paket anfragen →</a>
             </div>
         </div>
         <div class="fw-open reveal">
@@ -986,7 +986,7 @@
         <div class="faq-a"><div class="faq-a-inner">
             Wir bieten verschiedene Pakete, die sich nach dem Umfang Ihrer Anforderungen richten – von ersten Gehversuchen bis zur vollständigen Sales-Pipeline. In einem kurzen Erstgespräch klären wir gemeinsam, welches Paket am besten zu Ihren Zielen passt.<br><br>
             Das Beste: Wir liefern <strong>5 kostenlose Leads</strong> zum Testen – damit Sie unsere Qualität erleben, bevor Sie sich entscheiden.<br><br>
-            <a href="#kontakt" onclick="smoothNav(event,'#kontakt');document.querySelector('input[value=Erstgespräch]').checked=true;" style="color: var(--gold); font-weight: 600; text-decoration: none;">Jetzt kostenloses Erstgespräch buchen →</a>
+            <a href="#" onclick="event.preventDefault();openPaketMail('Pilot','5 kostenlose Leads zum Testen, kein Vertrag, keine Verpflichtung')" style="color: var(--gold); font-weight: 600; text-decoration: none;">Jetzt kostenloses Erstgespräch buchen →</a>
         </div></div>
     </div>
     <div class="faq-item reveal reveal-d1">
@@ -1605,6 +1605,25 @@
 
     window.addEventListener('hashchange', handleHash);
     handleHash();
+
+    function openPaketMail(paket, leistungen) {
+        const subject = encodeURIComponent('Interesse am ' + paket + '-Paket – BP:LeadSource');
+        const body = encodeURIComponent(
+            'Schönen guten Tag,\n\n' +
+            'wir haben Interesse am ' + paket + '-Paket (' + leistungen + ').\n' +
+            'Bitte lassen Sie uns ein Angebot zukommen.\n\n' +
+            '────────────────────────────\n\n' +
+            'Firma: \n' +
+            'Ansprechpartner: \n' +
+            'Branche: \n' +
+            'Zielgruppe (wen möchten Sie erreichen?): \n' +
+            'Zielregion (z.B. DACH, Deutschland, bestimmte Bundesländer): \n' +
+            'Gewünschter Start: \n\n' +
+            '────────────────────────────\n\n' +
+            'Mit freundlichen Grüßen'
+        );
+        window.location.href = 'mailto:leadsource@bp-shops.com?subject=' + subject + '&body=' + body;
+    }
 
     const form = document.getElementById('contact-form');
     if (form) {
