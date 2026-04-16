@@ -585,6 +585,9 @@
             .blog-article { padding: 100px 24px 60px; }
             .blog-article table { font-size: 0.78rem; }
             .blog-article th, .blog-article td { padding: 8px 10px; }
+            .founder-teaser-grid { grid-template-columns: 1fr !important; text-align: center; }
+            .founder-teaser-grid > div:first-child { justify-self: center; }
+            .founder-teaser-links { justify-content: center !important; }
         }
     </style>
 </head>
@@ -596,6 +599,7 @@
         <li><a href="#wie-es-funktioniert" onclick="smoothNav(event,'#wie-es-funktioniert')">Wie es funktioniert</a></li>
         <li><a href="#fuer-wen" onclick="smoothNav(event,'#fuer-wen')">Für wen</a></li>
         <li><a href="#pilot-angebot" onclick="smoothNav(event,'#pilot-angebot')">Pilot-Angebot</a></li>
+        <li><a href="/ueber-uns">Über uns</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="#kontakt" onclick="smoothNav(event,'#kontakt')">Kontakt</a></li>
     </ul>
@@ -609,6 +613,7 @@
     <a href="#wie-es-funktioniert" onclick="closeMenu()">Wie es funktioniert</a>
     <a href="#fuer-wen" onclick="closeMenu()">Für wen</a>
     <a href="#pilot-angebot" onclick="closeMenu()">Pilot-Angebot</a>
+    <a href="/ueber-uns" onclick="closeMenu()">Über uns</a>
     <a href="/blog" onclick="closeMenu()">Blog</a>
     <a href="#kontakt" onclick="closeMenu()">Kontakt</a>
     <a href="#kontakt" class="btn-nav" style="border-radius:6px;text-align:center;" onclick="closeMenu()">Kostenlos starten</a>
@@ -785,6 +790,29 @@
             „Wir liefern keine generischen Listen. Jeder Lead wird einzeln recherchiert, jede E-Mail verifiziert, jedes Anschreiben personalisiert. Masse kann jeder – wir liefern Qualität."
             <span style="display:block; margin-top:16px; font-family:'DM Sans',sans-serif; font-size:0.85rem; font-style:normal; color:var(--text-3); font-weight:500;">Philip Babuda, Gründer BP:LeadSource</span>
         </blockquote>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- GRÜNDER TEASER -->
+<section style="padding: 80px 56px;">
+    <div class="reveal founder-teaser-grid" style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:auto 1fr; gap:40px; align-items:center;">
+        <div style="position:relative;">
+            <img src="/images/philip-babuda.jpg" alt="Philip Babuda" style="width:140px; height:140px; border-radius:50%; object-fit:cover; object-position:center top; border:3px solid var(--border-gold);">
+        </div>
+        <div>
+            <div class="section-label">Ihr Ansprechpartner</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:700; color:var(--anthrazit); margin-bottom:12px; line-height:1.3;">Philip Babuda, Gründer</h2>
+            <p style="font-size:0.95rem; color:var(--text-2); line-height:1.8; font-weight:300; margin-bottom:16px;">Persönliche Betreuung statt Callcenter. Ich arbeite direkt mit Ihnen zusammen – von der Zielgruppen-Definition bis zur fertigen Outreach-Kampagne.</p>
+            <div class="founder-teaser-links" style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+                <a href="/ueber-uns" style="color:var(--gold); font-size:0.875rem; font-weight:500; text-decoration:none; transition:opacity 0.2s;">Mehr erfahren →</a>
+                <a href="https://www.linkedin.com/company/113105953" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; color:var(--text-3); font-size:0.82rem; text-decoration:none; transition:color 0.2s;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -1062,6 +1090,7 @@
             <h4 style="font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-3); margin-bottom:20px;">Ressourcen</h4>
             <div style="display:flex; flex-direction:column; gap:12px;">
                 <a href="/blog" style="font-size:0.85rem; color:var(--text-2); text-decoration:none;">Blog</a>
+                <a href="/ueber-uns" style="font-size:0.85rem; color:var(--text-2); text-decoration:none;">Über uns</a>
                 <a href="#faq" onclick="smoothNav(event,'#faq')" style="font-size:0.85rem; color:var(--text-2); text-decoration:none;">FAQ</a>
                 <a href="#fuer-wen" onclick="smoothNav(event,'#fuer-wen')" style="font-size:0.85rem; color:var(--text-2); text-decoration:none;">Für wen?</a>
             </div>
