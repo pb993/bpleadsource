@@ -2015,7 +2015,7 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     function showPage(page, scrollTo) {
-        var pages = ['main','impressum','datenschutz','blog-aeo-de','blog-aeo-en','blog-leads-de','blog-leads-en','blog-coldemail-de','blog-coldemail-en'];
+        var pages = ['main','impressum','datenschutz','blog-aeo-de','blog-aeo-en','blog-leads-de','blog-leads-en','blog-coldemail-de','blog-coldemail-en','blog-kosten-de','blog-kosten-en'];
         pages.forEach(function(p) {
             var el = document.getElementById(p + '-page');
             if (el) el.style.display = p === page ? 'block' : 'none';
